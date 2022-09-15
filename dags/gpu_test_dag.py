@@ -52,7 +52,7 @@ def gpu_test_dag():
         benchmark = AIBenchmark()
         results = benchmark.run()
         print(results)
-        return results
+        return str(results)
 
     non_gpu_test = run_in_non_gpu_worker()
     gpu_test = run_in_gpu_worker(non_gpu_test)
