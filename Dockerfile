@@ -12,7 +12,6 @@ RUN apt-get -y install cuda
 RUN curl -O https://developer.download.nvidia.com/compute/redist/cudnn/v8.3.1/local_installers/11.5/cudnn-linux-x86_64-8.3.1.22_cuda11.5-archive.tar.xz
 
 RUN tar -xvf cudnn-linux-x86_64-8.3.1.22_cuda11.5-archive.tar.xz
-
 RUN cp cudnn-*-archive/include/cudnn*.h /usr/local/cuda/include 
 RUN cp -P cudnn-*-archive/lib/libcudnn* /usr/local/cuda/lib64 
 RUN chmod a+r /usr/local/cuda/include/cudnn*.h /usr/local/cuda/lib64/libcudnn*
